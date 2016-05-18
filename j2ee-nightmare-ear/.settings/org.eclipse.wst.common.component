@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="j2ee-nightmare-ear-0.0.1-SNAPSHOT">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="j2ee-nightmare-ejb-0.0.1-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/j2ee-nightmare-ejb/j2ee-nightmare-ejb">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="j2ee-nightmare-war-0.0.1-SNAPSHOT.war" deploy-path="/" handle="module:/resource/j2ee-nightmare-war/j2ee-nightmare-war">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="j2ee-nightmare-common-0.0.1-SNAPSHOT.jar" deploy-path="/lib" handle="module:/resource/j2ee-nightmare-common/j2ee-nightmare-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

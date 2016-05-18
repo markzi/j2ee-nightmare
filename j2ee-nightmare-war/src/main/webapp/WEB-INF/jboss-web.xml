@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-web>
+
+	<ejb-ref>
+		<ejb-ref-name>ejb/session/MyEjb</ejb-ref-name>
+		<jndi-name>java:app/ejb-jar/MyEjb</jndi-name>
+	</ejb-ref>
+
+</jboss-web>

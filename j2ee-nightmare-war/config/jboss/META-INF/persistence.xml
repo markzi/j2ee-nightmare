@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+    <persistence-unit name="exchange">
+
+        <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+
+        <jta-data-source>java:/jdbc/test/trade</jta-data-source>
+
+        <class>uk.co.hpi.exchange.model.StockCustomerLive</class>
+        <class>uk.co.hpi.exchange.model.StockCustomerDormant</class>
+        <class>uk.co.hpi.exchange.model.StockCustomerView</class>        
+        <class>uk.co.hpi.exchange.model.StockPublishingGroup</class>
+        <class>uk.co.hpi.exchange.model.Customer</class>
+        <class>uk.co.hpi.exchange.model.Directory</class>
+        <class>uk.co.hpi.exchange.model.GenericStockCustomerData</class>
+        <class>uk.co.hpi.exchange.model.StockEquipment</class>
+        <class>uk.co.hpi.exchange.model.StockEquipmentPK</class>
+        <class>uk.co.hpi.exchange.model.StockCustomerExtra</class>
+        <class>uk.co.hpi.exchange.model.StockImage</class>
+        <class>uk.co.hpi.exchange.model.StockImagePK</class>
+        <class>uk.co.hpi.exchange.model.GroupMember</class>
+        <class>uk.co.hpi.exchange.model.GroupMemberPK</class>
+        <class>uk.co.hpi.exchange.model.Make</class>
+        <class>uk.co.hpi.exchange.model.MakePK</class>
+        <class>uk.co.hpi.exchange.model.HpiCode</class>
+        <class>uk.co.hpi.exchange.model.Model</class>
+        <class>uk.co.hpi.exchange.model.ModelPK</class>
+        <class>uk.co.hpi.exchange.model.BodyType</class>
+        <class>uk.co.hpi.exchange.model.BodyTypePK</class>
+        <class>uk.co.hpi.exchange.model.AllHCode</class>
+        <class>uk.co.hpi.exchange.model.Group</class>
+        <class>uk.co.hpi.exchange.model.Trim</class>
+        <class>uk.co.hpi.exchange.model.TrimPK</class>
+        <class>uk.co.hpi.exchange.model.TransmissionSpeed</class>
+        <class>uk.co.hpi.exchange.model.TransmissionSpeedPK</class>
+        <class>uk.co.hpi.exchange.model.TransmissionType</class>
+        <class>uk.co.hpi.exchange.model.TransmissionTypePK</class>
+        <class>uk.co.hpi.exchange.model.FuelType</class>
+        <class>uk.co.hpi.exchange.model.FuelTypePK</class>        
+        <class>uk.co.hpi.exchange.model.Lifestyle</class>
+        <class>uk.co.hpi.exchange.model.LifestylePK</class>
+        
+        <class>uk.co.hpi.exchange.model.Colour</class>
+        <class>uk.co.hpi.exchange.model.Doors</class>
+        <class>uk.co.hpi.exchange.model.DoorsPK</class>
+        
+        <properties>
+
+            <property name="openjpa.jdbc.Schema" value="DHPI04" />
+            <property name="openjpa.Log" value="DefaultLevel=WARN, Runtime=INFO, Tool=INFO, SQL=TRACE" />
+    
+            <!-- <property name="jboss.as.jpa.providerModule" value="org.jboss.as.jpa.openjpa" /> -->
+            <property name="jboss.as.jpa.providerModule" value="org.apache.openjpa" />
+            <property name="jboss.as.jpa.adapterModule" value="org.jboss.as.jpa.openjpa" />
+            <property name="jboss.as.jpa.adapterClass" value="org.jboss.as.jpa.openjpa.OpenJPAPersistenceProviderAdaptor" />
+    
+        </properties>
+    </persistence-unit>
+
+</persistence>
