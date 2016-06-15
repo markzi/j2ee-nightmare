@@ -3,10 +3,15 @@ package my.project;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import my.project.common.MyLocal;
 
 public class MyClient {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(MyClient.class);
+	
 	private final InitialContext initialContext;
 
 	public MyClient() {
@@ -35,6 +40,7 @@ public class MyClient {
 			MyLocal myLocal = (MyLocal) initialContext.lookup("java:comp/env/ejb/session/MyEjb");
 			myLocal.myLocalBusinessMethod();
 		} catch (NamingException e) {
+			LOGGER.error("Problem looking up EJB", e);
 		}
 	}
 }

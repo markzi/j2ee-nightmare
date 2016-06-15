@@ -14,28 +14,18 @@ package my.project;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @author UKHAmhom
  *
  */
-@RestController
+@SpringBootApplication
 @EnableAutoConfiguration
-public class Application
-{
-	MyClient client = new MyClient();
-	
-    @RequestMapping("/")
-    String home()
-    {
-    	client.callMyLocalBusinessMethod();
-        return "Hello World!";
-    }
+public class Application {
 
-    public static void main(String[] args) throws Exception
-    {
-        SpringApplication.run(Application.class, args);
-    }
+	public static void main(String[] args) throws Exception {
+		SpringApplication.run(Application.class, args);
+	}
 }
